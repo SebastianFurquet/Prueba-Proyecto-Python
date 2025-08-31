@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bienvenida</title>
 </head>
 <body>
-    <h1>Bienvenidos</h1>
+
+    <form action="{% url "lista_estudiantes" %}" method='GET'>
+        <button type='submit'> Listado de estudiantes </button>
+    </form>
+
+    <form action="{% url "estudiantes_form" %}" method='GET'>
+        <button type='submit'> Formulario de estudiantes </button>
+    </form>
+
+        <form action="{% url "buscarEstudiante" %}" method='GET'>
+        <button type='submit'> Buscar Estudiantes </button>
+    </form>
+
 </body>
 </html>

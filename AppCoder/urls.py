@@ -3,7 +3,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    #path('crear-auto/<marca>/<modelo>', views.crear_auto , name='crear_auto'),
-    path('auto/crear/', views.crear_auto_v2 , name='crear_auto')
-    
+    path('estudiantes/', views.lista_estudiantes, name='lista_estudiantes'),
+    path('estudiantes/<int:pk>/', views.detalle_estudiante, name='detalle_estudiante'),
+    path("estudiantes/form/", views.estudiantes_form, name="estudiantes_form"),
+    path('buscarEstudiante/', views.buscarEstudiante, name='buscarEstudiante'),
 ]

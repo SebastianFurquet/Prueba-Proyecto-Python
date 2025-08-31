@@ -1,5 +1,11 @@
 from django import forms
+from .models import Estudiante
 
-class FormularioCreacionAuto(forms.Form):
-    marca = forms.CharField(max_length=20)
-    modelo = forms.CharField(max_length=20)
+class EstudianteForm(forms.Form):
+    nombre = forms.CharField(max_length=100)
+    apellido = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    
+
+class BusquedaEstudianteForm(forms.Form):
+    apellido = forms.CharField(max_length=100)

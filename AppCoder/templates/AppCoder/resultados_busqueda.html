@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de busqueda</title>
+</head>
+<body>
+    <h1>Resultado de busqueda</h1>
+
+    {% if resultados %} 
+<ul> 
+    {% for estudiante in resultados %} 
+    <li>
+        {{ estudiante.nombre }} - Apellido: {{ estudiante.apellido }}
+    </li> 
+    {% endfor %} 
+</ul> 
+{% else %} 
+<p>No se encontraron resultados.</p> 
+{% endif %} 
+
+<a href="{% url 'buscarEstudiante' %}">Nueva Búsqueda</a>
+
+</body>
+</html>
+
+
+
+
